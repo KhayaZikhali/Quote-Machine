@@ -1,0 +1,95 @@
+nav {
+  display : flex;
+  justify-content: left;
+  align-items: center;
+  min-height: 10vh ;
+  max-width: 100vw;
+  background: rgb(36, 61, 70);
+}
+
+a {
+  text-decoration: none;
+  color:white;
+}
+
+a:hover {
+  transform: scaleZ(2);
+}
+
+.ul {
+  list-style: none;
+  justify-content: space-around;
+}
+
+.App {
+  text-align:center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.nav-links {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+
+.saved {
+  justify-self: right;
+  margin-left: -15vw;
+}
+
+.title {
+  color:gold;
+  font-size:20px;
+  font-weight: bold;
+  margin-left: 1vw;
+
+}
+
+.new {
+  margin-left:40vw;
+  text-decoration: none;
+}
+
+.new:link {
+  list-style: none;
+  text-decoration: none;
+}
+
+.items {
+  margin-top: 10vh;
+  width:15vw;
+  min-height:4vh;
+  size: 60px;
+}
+
+.quote {
+  box-sizing: border-box;
+  background-color: grey;
+  max-height: 35rem;
+  max-width:50rem;
+  padding: 3rem;
+  font-size:80px;
+  justify-content: space-between;
+  justify-self: space-around;
+  margin-left: 20vw;
+  margin-right: 20vw;
+  margin-top: 20vh;
+
+}
+
+.quote > p {
+  color: white;
+}
+
+.quote  > h1 {
+  position: fixed;
+  font-size:10px;
+  color: blue;
+  position: sticky;
+  margin-top:25%;
+  margin-left: 90%;
+}
