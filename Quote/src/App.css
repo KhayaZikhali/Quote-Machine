@@ -7,6 +7,23 @@ nav {
   background: rgb(36, 61, 70);
 }
 
+button {
+  cursor : pointer;
+  color : rgb(79, 151, 11);
+  background: yellowgreen;
+  width:8vw;
+  height:4vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  border:none;
+}
+
+
+button:active {
+  border-style: none;
+  outline-style: none;
+  border-top-style: none;
+}
+
 a {
   text-decoration: none;
   color:white;
@@ -22,9 +39,11 @@ a:hover {
 }
 
 .App {
+  overflow: hidden;
   text-align:center;
   height: 100vh;
   width: 100vw;
+  background-color:#270d63;
 }
 
 .nav-links {
@@ -37,8 +56,8 @@ a:hover {
 
 
 .saved {
-  justify-self: right;
-  margin-left: -15vw;
+  justify-self: left;
+  color: whitesmoke;
 }
 
 .title {
@@ -68,7 +87,7 @@ a:hover {
 
 .quote {
   box-sizing: border-box;
-  background-color: grey;
+  background-color: transparent;
   max-height: 35rem;
   max-width:50rem;
   padding: 3rem;
@@ -77,8 +96,8 @@ a:hover {
   justify-self: space-around;
   margin-left: 20vw;
   margin-right: 20vw;
-  margin-top: 20vh;
-
+  margin-top: 3vh;
+  font-size: 30px;
 }
 
 .quote > p {
@@ -92,4 +111,29 @@ a:hover {
   position: sticky;
   margin-top:25%;
   margin-left: 90%;
+  font-size :20px;
+  margin-right: 20px;
+  color: yellow;
+}
+
+
+.caption {
+  position: relative;
+  width: 300px;
+  cursor: pointer;
+}
+
+span {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, .7);
+  height: 200px;
+  width: 300px;
+  color: #fff;
+}
+
+.thing {
+  color:gold;
 }

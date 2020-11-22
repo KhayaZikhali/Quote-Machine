@@ -1,6 +1,6 @@
 import Nav from './Nav';
 import './App.css';
-import { MyComponent} from './Create'
+import { Create, MyComponent} from './Create'
 import {BrowserRouter as Router} from 'react-router-dom';
  
 function App() {
@@ -9,6 +9,7 @@ function App() {
       <Router>
     <Nav />
     </Router>
+    <Create />  
     < MyComponent />
     </div>
   );
