@@ -2,10 +2,9 @@
 import React from 'react';
 import './App.css';
 
-
-
 {/*Quoetes to be addded to the screen */}
-const quotes =[             
+
+const quotes = [             
   {"author": "Marilyn Monroe",
    "quote" : "I'm selfish, impatient and a little insecure. I make mistakes, I am out of control and at times hard to handle. But if you can't handle me at my worst, then you sure as hell don't deserve me at my best." },
   {"author" : "Oscar Wilde",
@@ -20,7 +19,7 @@ const quotes =[
   {"author" : "Mae West",  "quote" : "You only live once , but if you do it right once is enough"},
   {"author" : " ",  "quote" : "In three words I can sum up all that I have learned about life ,  It Goes On"},
   {"author" : " Albert Camus",  "quote" : "Don't walk in front of me , I may not follow. Don't walk behind me, I may not lead. Walk beside me , just be my friend"},
-  {"author" : "Mark Twain",  "quote" : "If you tell the truth ,you won't have to remember anything"},
+  {"author" : "Mark Twain",  "quote" : "If you tell the truth , you won't have to remember anything"},
   {"author" : "Maya Angelou  ",  "quote" : "I've learned that people won't rememebr what you said, only how you made them feel"},
   {"author" : "Oscar Wilde",  "quote" : "To live is the rarest thing in the world, most people exist"},
   {"author" : "Mahatma Gandhi",  "quote" : "Live as if you were to die tomorrow, learn as if you were to live forever"},
@@ -51,7 +50,7 @@ const quotes =[
   {"author" : "John Lennon",  "quote" : "Life is what happens when you're busy making other plans. "},
   {"author" : "Robert Louis Stevenson  ",  "quote" : "Don't judge each day by the harvest you reap but by the seeds that you plant "},
   {"author" : "Helen Keller  ",  "quote" : "The best and most beautiful things in the world cannot be seen or even touched - they must be felt with the heart "},
-  {"author" : "Ralph Waldo Emerson  ",  "quote" : "Do not go where the path may lead, go instead where there is no path and leave a trai "},
+  {"author" : "Ralph Waldo Emerson  ",  "quote" : "Do not go where the path may lead, go instead where there is no path and leave a trail "},
   {"author" : "Mother Teresa  ",  "quote" : "Spread love everywhere you go. Let no one ever come to you without leaving happier "},
   {"author" : "Benjamin Franklin  ",  "quote" : "Tell me and I forget. Teach me and I remember. Involve me and I learn. "},
   {"author" : "Anne Frank  ",  "quote" : "Whoever is happy will make others happy too. "},
@@ -62,46 +61,52 @@ const quotes =[
   {"author" : "Barack Obama ",  "quote" : "The real test is not whether you avoid this failure, because you won't. It's whether you let it harden or shame you into inaction, or whether you learn from it; whether you choose to persevere. "},
   {"author" : "Oprah  ",  "quote" : "You know you are on the road to success if you would do your job and not be paid for it. "},
   {"author" : "Rosa Parks",  "quote" : "I have learned over the years that when one's mind is made up, this diminishes fear. "},
-  {"author" : "Joshua Mqabuko Nyongolo Nkomo  ",  "quote" : "The hardest lesson of my life has come to me late. It is that a nation can win freedom without its people becoming free. "},
+  {"author" : "Joshua Mqabuko Nyongolo Nkomo  ",  "quote" : "The hardest lesson of my life has come to me late. It is that a nation can win freedom without its people becoming free."},
   {"author" : "Oprah  ",  "quote" : "You become what you believe "},
-  {"author" : "Anne Frank  ",  "quote" : "How wonderful it is that nobody need wait a single moment before starting to improve the world. "},
-  {"author" : "Khaya",  "quote" : " "},
-]
+  {"author" : "Anne Frank",  "quote" : "How wonderful it is that nobody need wait a single moment before starting to improve the world. "},
+  {"author" : "Khaya",  "quote" : " "}
+]; 
 
-function rando(max) {
-  return Math.floor(Math.random() * Math.floor(max));
+// create a fucntion to return a random quote
+
+var time = [];
+
+function Item(){
+  return (
+    <div>
+        <button onClick={() => {
+          time.push(quotes[Math.floor(Math.random * Math.floor(quotes.length))]);
+        }}>Click me</button>
+    </div>
+  )
 }
 
-var time = quotes[rando(quotes.length)];
-   
-class MyComponent extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {
-       time
-      }
+class Button extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
     }
-    render() {
-      return (
-        <div className="body">
-        <div className="quote">
-      <p>“ {this.state.time.quote} “</p>  
-        </div>
-       <button type="button" onClick="refreshPage()">New Quote</button>
-        </div>
-      );
-    }
-  };
-    
-  function Create(props){
+ this.handleClick = this.handleClick.bind(this);
+  }
+  
+handleClick(){
+return quotes[Math.floor(Math.random * Math.floor(quotes.length))];
+}
+
+  render() {
     return (
-        <div>
-            <h1 className="thing">{time.author}</h1>
-        </div>
-    )
-};
+      <div className="quotes">
+        <h1>{this.state.time} oADNFinODFO: </h1>
+         <div>
+          <p>{this.state.time}</p>
+         </div>
+        <button onClick={() => { this.handleClick()}}>Click me</button>
+      </div>
+    );
+  }
+}
 
 export {
-    Create ,
-    MyComponent
+  Button,
+  Item
 }
