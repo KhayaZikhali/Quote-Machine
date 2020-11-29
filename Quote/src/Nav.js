@@ -16,7 +16,7 @@ const styles = {
        </h3>
        {/* links to the twittre page */}
            <Link style={styles}>
-            <a href="https://twitter.com/intent/=" target="blank">
+            <a  id="tweet-quote" href="https://twitter.com/intent/tweet" target="_top">
               <h3 className="new">
                Twitter
               </h3>

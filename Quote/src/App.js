@@ -1,6 +1,6 @@
 import Nav from './Nav';
 import './App.css';
-import {Button} from './Create'
+import {Appo} from './Create'
 import {BrowserRouter as Router} from 'react-router-dom';
  
 function App() {
@@ -9,8 +9,8 @@ function App() {
     <Router>
     <Nav />
     </Router>
-    <Button />
-    </div>
+    <Appo />
+        </div>
   );
  }
  // add button to run the randimiser functon onclick
