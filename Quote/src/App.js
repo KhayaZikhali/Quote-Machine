@@ -1,18 +1,17 @@
 import Nav from './Nav';
 import './App.css';
-import { Create, MyComponent} from './Create'
+import {Appo} from './Create'
 import {BrowserRouter as Router} from 'react-router-dom';
  
 function App() {
   return (
     <div className="App">
-      <Router>
+    <Router>
     <Nav />
     </Router>
-    <Create />  
-    < MyComponent />
-    </div>
+    <Appo />
+        </div>
   );
  }
- 
+ // add button to run the randimiser functon onclick
 export default App;

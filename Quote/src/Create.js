@@ -18,9 +18,8 @@ const quotes =[
   {"author" : "Bernard M Baruch",  "quote" : "Be who you are and say what you feel because those who mind don't matter and those who matter don't mind"},
   {"author" : "Dr Suess",  "quote" : "You know you're in love  when you can't fall asleep because reality is finally better than your dreams."},
   {"author" : "Mae West",  "quote" : "You only live once , but if you do it right once is enough"},
-  {"author" : " ",  "quote" : "In three words I can sum up all that I have learned about life ,  It Goes On"},
   {"author" : " Albert Camus",  "quote" : "Don't walk in front of me , I may not follow. Don't walk behind me, I may not lead. Walk beside me , just be my friend"},
-  {"author" : "Mark Twain",  "quote" : "If you tell the truth ,you won't have to remember anything"},
+  {"author" : "Mark Twain",  "quote" : "If you tell the truth , you won't have to remember anything"},
   {"author" : "Maya Angelou  ",  "quote" : "I've learned that people won't rememebr what you said, only how you made them feel"},
   {"author" : "Oscar Wilde",  "quote" : "To live is the rarest thing in the world, most people exist"},
   {"author" : "Mahatma Gandhi",  "quote" : "Live as if you were to die tomorrow, learn as if you were to live forever"},
@@ -65,43 +64,40 @@ const quotes =[
   {"author" : "Joshua Mqabuko Nyongolo Nkomo  ",  "quote" : "The hardest lesson of my life has come to me late. It is that a nation can win freedom without its people becoming free. "},
   {"author" : "Oprah  ",  "quote" : "You become what you believe "},
   {"author" : "Anne Frank  ",  "quote" : "How wonderful it is that nobody need wait a single moment before starting to improve the world. "},
+  {"author" : "Confucious ",  "quote" : "Real knowledge is to know the extent of one's ignorance. "},
+  {"author" : "Martin Luther King Jr.",  "quote" : " I know, somehow, that only when it is dark enough can you see the stars."},
   {"author" : "Khaya",  "quote" : " "},
-]
+];
 
-function rando(max) {
-  return Math.floor(Math.random() * Math.floor(max));
-}
-
-var time = quotes[rando(quotes.length)];
    
-class MyComponent extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {
-       time
-      }
-    }
-    render() {
-      return (
-        <div className="body">
-        <div className="quote">
-      <p>“ {this.state.time.quote} “</p>  
-        </div>
-       <button type="button" onClick="refreshPage()">New Quote</button>
-        </div>
-      );
-    }
-  };
-    
-  function Create(props){
-    return (
-        <div>
-            <h1 className="thing">{time.author}</h1>
-        </div>
-    )
-};
+class Appo extends React.Component {
+  constructor(props) {
+    super(props);
+    this.sayHello = this.sayHello.bind(this);
+    this.state = {
+      quote: quotes[Math.floor(Math.random() * quotes.length)]
+    };
+  }
+  sayHello() {
+    this.setState({
+      quote: quotes[Math.floor(Math.random() * quotes.length)]
+    });
+  }
 
+  render() {
+    return (
+      <div className="body">
+        <div className="quote-box">
+        <h1 id="author" >{this.state.quote.author}</h1>
+          <p id="text" >“{this.state.quote.quote}“</p>
+        </div>
+        <button id="new-quote" className = "butt" type="button" onClick={() => this.sayHello()}>
+          New Quote
+        </button>
+      </div>
+    );
+  }
+}
 export {
-    Create ,
-    MyComponent
+    Appo
 }

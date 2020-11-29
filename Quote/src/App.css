@@ -10,11 +10,15 @@ nav {
 button {
   cursor : pointer;
   color : rgb(79, 151, 11);
-  background: yellowgreen;
+  background: rgb(110, 22, 145);
   width:8vw;
   height:4vh;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   border:none;
+}
+
+p {
+  color: white;
 }
 
 
@@ -54,7 +58,6 @@ a:hover {
   list-style: none;
 }
 
-
 .saved {
   justify-self: left;
   color: whitesmoke;
@@ -65,7 +68,6 @@ a:hover {
   font-size:20px;
   font-weight: bold;
   margin-left: 1vw;
-
 }
 
 .new {
@@ -85,37 +87,23 @@ a:hover {
   size: 60px;
 }
 
-.quote {
-  box-sizing: border-box;
-  background-color: transparent;
-  max-height: 35rem;
-  max-width:50rem;
-  padding: 3rem;
-  font-size:80px;
-  justify-content: space-between;
-  justify-self: space-around;
-  margin-left: 20vw;
-  margin-right: 20vw;
-  margin-top: 3vh;
-  font-size: 30px;
+.quote-box {
+  align-items:center;
+  justify-content: center;
+  margin-top:10rem;
+  font-size:30px;
+  width:50%(vw);
+  margin-left: 50%(width);
 }
+ 
 
-.quote > p {
-  color: white;
-}
-
-.quote  > h1 {
+.quote-box > h1 {
   position: fixed;
-  font-size:10px;
-  color: blue;
+  font-size:30px;
   position: sticky;
-  margin-top:25%;
-  margin-left: 90%;
-  font-size :20px;
-  margin-right: 20px;
+  margin-top:1%;
   color: yellow;
 }
-
 
 .caption {
   position: relative;
@@ -134,6 +122,6 @@ span {
   color: #fff;
 }
 
-.thing {
-  color:gold;
+#new-quote {
+  margin-top: 10rem;
 }
