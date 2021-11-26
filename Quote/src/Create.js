@@ -4,7 +4,7 @@ import './App.css';
 
 
 
-{/*Quoetes to be addded to the screen */}
+{/*Quotes to be added to the screen */}
 const quotes =[             
   {"author": "Marilyn Monroe",
    "quote" : "I'm selfish, impatient and a little insecure. I make mistakes, I am out of control and at times hard to handle. But if you can't handle me at my worst, then you sure as hell don't deserve me at my best." },
@@ -62,9 +62,9 @@ const quotes =[
   {"author" : "Oprah  ",  "quote" : "You know you are on the road to success if you would do your job and not be paid for it. "},
   {"author" : "Rosa Parks",  "quote" : "I have learned over the years that when one's mind is made up, this diminishes fear. "},
   {"author" : "Joshua Mqabuko Nyongolo Nkomo  ",  "quote" : "The hardest lesson of my life has come to me late. It is that a nation can win freedom without its people becoming free. "},
-  {"author" : "Oprah  ",  "quote" : "You become what you believe "},
+  {"author" : "Oprah",  "quote" : "You become what you believe "},
   {"author" : "Anne Frank  ",  "quote" : "How wonderful it is that nobody need wait a single moment before starting to improve the world. "},
-  {"author" : "Confucious ",  "quote" : "Real knowledge is to know the extent of one's ignorance. "},
+  {"author" : "Confucious",  "quote" : "Real knowledge is to know the extent of one's ignorance. "},
   {"author" : "Martin Luther King Jr.",  "quote" : " I know, somehow, that only when it is dark enough can you see the stars."},
   {"author" : "Khaya",  "quote" : " "},
 ];
