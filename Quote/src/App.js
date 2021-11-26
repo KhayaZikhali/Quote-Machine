@@ -24,8 +24,10 @@ let text = "Learning Never Stops!!";
 let i = 0;
 
 setInterval(function(){
+  // find out what this doea
     let cursor= (i%4 == 0 || 1%3 == 0 ? "_" : "&nbsp;");
     let displayText = text.substring(0, i % text.length+1);
+    // find way to link name to the id and remove the error 
     document.getElementById("typespace").innerHTML = displayText;
     i++;
 // adjust inteval time to adjust to the length of the author name such that the duration of the animation is the same for every name in the list
